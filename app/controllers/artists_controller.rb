@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
 
   get '/songs' do
-    @song = Song.create(name: params[:name])
+    @song = Song.all
+    erb :'songs/index'
   end
 end
